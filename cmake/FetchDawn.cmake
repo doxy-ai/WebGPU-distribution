@@ -39,11 +39,11 @@ FetchContent_Declare(
 	DOWNLOAD_COMMAND
 		cd ${FETCHCONTENT_BASE_DIR}/dawn-src &&
 		git init &&
-		git fetch --depth=1 https://dawn.googlesource.com/dawn chromium/6719 &&
+		git fetch --depth=1 https://dawn.googlesource.com/dawn chromium/6809 &&
 		git reset --hard FETCH_HEAD
 
-	PATCH_COMMAND
-		git apply --ignore-space-change --ignore-whitespace "${CMAKE_CURRENT_LIST_DIR}/../patch/dawn.patch"
+	# PATCH_COMMAND
+	# 	git apply --ignore-space-change --ignore-whitespace "${CMAKE_CURRENT_LIST_DIR}/../patch/dawn.patch"
 )
 
 FetchContent_GetProperties(dawn)
